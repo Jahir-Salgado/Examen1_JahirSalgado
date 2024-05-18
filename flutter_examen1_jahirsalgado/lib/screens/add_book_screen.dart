@@ -1,3 +1,4 @@
+// lib/screens/add_book_screen.dart
 import 'package:flutter/material.dart';
 import '../models/book.dart';
 
@@ -52,7 +53,7 @@ class _AddBookScreenState extends State<AddBookScreen> {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
-                    Navigator.pop(context, Book(_title, _author));
+                    Navigator.pop(context, Book(title: _title, author: _author));
                   }
                 },
                 child: Text('Agregar'),

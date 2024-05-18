@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'core/app_router.dart';
+import 'screens/book_list_screen.dart';
 
 void main() {
-  runApp(ExamenApp());
+  runApp(const ExamenApp());
 }
 
 class ExamenApp extends StatelessWidget {
-  final AppRouter _appRouter = AppRouter();
+  const ExamenApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'examen1_jahirsalgado',
+    return MaterialApp(
+      title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.blue,
       ),
-      routerConfig: _appRouter.router,
+      home: const BookListScreen(),
     );
   }
 }
